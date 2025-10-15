@@ -1,0 +1,33 @@
+package myPkg;
+
+import java.sql.Timestamp;
+
+public class BoardBean {
+	private int num;         // 글 번호 (PK)
+    private String writer;   // 작성자
+    private String subject;  // 제목
+    private String passwd;   // 비밀번호
+    private Timestamp reg_date; // 작성일
+    private int readcount;   // 조회수
+    private int ref;         // 원글 그룹 번호
+    private int re_step;     // 답글 순서
+    private int re_level;    // 답글 깊이
+    private String content;  // 내용
+	
+    public BoardBean(int num, String writer, String subject, String passwd, Timestamp reg_date, int readcount, int ref,
+			int re_step, int re_level, String content) {
+		super();
+		this.num = num;
+		this.writer = writer;
+		this.subject = subject;
+		this.passwd = passwd;
+		this.reg_date = reg_date;
+		this.readcount = readcount;
+		this.ref = ref;
+		this.re_step = re_step;
+		this.re_level = re_level;
+		this.content = content;
+	}
+    
+    
+}

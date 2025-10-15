@@ -1,0 +1,18 @@
+package myPkg;
+
+import java.sql.Timestamp;
+
+public class ProductBean {
+	private int id;
+	private String name;
+	private int price;
+	private String company;
+	private String regdate;
+	
+	public ProductBean() {
+		
+	}
+
+	
+	
+}

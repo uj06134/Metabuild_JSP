@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
+<jsp:useBean id="bb" class="myPkg.BoardBean"/>
+<jsp:setProperty property="*" name="bb"/>
+<jsp:useBean id="bdao" class="myPkg.BoardDao"/>
+
+<%
+	int cnt = bdao.updateBoard(bb);
+	if (cnt == 1){
+		response.sendRedirect("list.jsp");
+	}else {
+		response.sendRedirect("updateForm.jsp?num=" + bb.getNum());
+%>
+	<script type="text/javascript">
+		alert("비밀번호가 일치하지 않음");
+		// 내가 지금까지 거쳐온 페이지를 기억하고 있는 객체
+		history
+		
+	</script>
+<%		
+	}
+%>

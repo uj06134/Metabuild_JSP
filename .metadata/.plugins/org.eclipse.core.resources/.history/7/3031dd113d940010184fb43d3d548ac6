@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+list.jsp<br>
+<style>
+    table {
+        width: 80%;
+        border-collapse: collapse; 
+        margin: auto;         
+        text-align: center;
+
+    th, td {
+        border: 1px solid black;
+    }
+</style>
+
+
+
+<table>
+	<tr>
+	    <th>번호</th>
+	    <th>이름</th>
+	    <th>소속 회사</th>
+	    <th>이메일 주소</th>
+	    <th>과정 만족도</th>
+	    <th>관심 분야</th>
+	    <th>정보 발송 방법</th>
+	    <th>정보 발송 동의</th>
+	    <th>수정</th>
+	    <th>삭제</th>
+	</tr>
+	
+	<c:forEach var="sb" items="${lists}">
+		<tr>
+			<td>${sb.no}</td>
+			<td>${sb.name}</td>
+			<td>${sb.company}</td>
+			<td>${sb.email}</td>
+			<td>${sb.satisfaction}</td>
+			<td>${sb.part}</td>
+			<td>${sb.howto}</td>
+			<td>
+				<c:choose>
+				    <c:when test="${sb.agree == 1}">동의함</c:when>
+				    <c:otherwise>동의안함</c:otherwise>
+			  	</c:choose>
+			</td>
+			<td><a href="">삭제</a></td>
+			<td><a href="">수정</a></td>
+		</tr>
+	</c:forEach>
+</table>
+
+<br>
+<a href="insertForm.jsp">insert</a>

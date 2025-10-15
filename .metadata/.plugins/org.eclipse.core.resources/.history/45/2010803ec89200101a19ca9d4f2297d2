@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<%
+    request.setCharacterEncoding("UTF-8");
+    String[] fruits = request.getParameterValues("fruit");
+
+    for(String f : fruits) {
+        out.print(f + " ");
+    }
+    
+%>
+<br>
+
+
+<c:forEach var="i" begin="0" end="${fn:length(paramValues.fruit)-1}">
+    ${paramValues.fruit}[i]}
+</c:forEach>
+
+
+<c:forEach var="f" items="${fruits}">
+    ${f}	
+</c:forEach>

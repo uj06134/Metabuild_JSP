@@ -1,0 +1,138 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.util.*" %>
+<%@ page import = "myPkg.*" %>  
+<%@ page import="java.text.SimpleDateFormat" %>
+
+<%-- <jsp:useBean id="bdao" class="myPkg.BoardDao"/> --%>
+
+<%
+	// 싱글톤 패턴
+	BoardDao bdao = BoardDao.getInstance();
+
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+	int pageSize = 10; // 1페이지당 10개
+	
+	String pageNum = request.getParameter("pageNum");
+	if(pageNum == null){ // 현재화면에서 실행
+		pageNum = "1";
+	}
+	int currentPage = Integer.parseInt(pageNum);
+	int startRow = (currentPage - 1) * pageSize + 1;
+	int endRow = (currentPage * pageSize);
+	
+	// 전체 레코드 개수
+	int count = bdao.getArticleCount();
+	ArrayList<BoardBean> list = bdao.getArticles(startRow, endRow);
+	// 현재 페이지에 처음 시작되는 번호
+	int number = count - (currentPage - 1) * pageSize;
+%>
+
+<style>
+    table {
+        border-collapse: collapse;
+        margin: auto;
+    }
+    th {
+    	background-color: skyblue;
+    	border: 1px solid #232323;
+    }
+    
+    td {
+        border: 1px solid #232323;
+        padding: 5px;
+    }
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+    #page {
+        text-align: center;
+        margin-top: 15px;
+    }
+</style>
+<b>글목록(전체 글: <%=count %>)</b>
+<table width="700">
+	<tr>
+		<td>
+			<a href="writeForm.jsp">글쓰기</a>
+		</td>
+	</tr>
+</table>
+<table width="700">
+	<tr height="30"> 
+      <th align="center"  width="50"  >번 호</th> 
+      <th align="center"  width="250" >제   목</th> 
+      <th align="center"  width="100" >작성자</th>
+      <th align="center"  width="150" >작성일</th> 
+      <th align="center"  width="50" >조 회</th> 
+      <th align="center"  width="100" >IP</th>
+    </tr>
+    <% 
+    	for(int i=0; i<list.size(); i+=1){
+    		BoardBean bb = list.get(i);
+    %>		
+	    	<tr>
+	    		<td><%=number-- %></td>
+	    		<td>
+	    		<% 
+	    			if(bb.getRe_level()>0){
+	    				int wid = bb.getRe_level()*20;
+	    		%>
+	    			<img src="./images/level.gif" width="<%=wid %>" height="15">
+	    			<img src="./images/re.gif" >
+	    		<%    				
+	    			}
+	    		%>
+	    			<a href="content.jsp?num=<%=bb.getNum() %>&pageNum=<%=pageNum%>"><%=bb.getSubject() %></a>
+	    			<%
+	    				if(bb.getReadcount()>=10){
+	    			%>
+	    					<img src="./images/hot.gif" height="15">
+	    			<%
+	    				}
+	    			%>
+	    		</td>
+	    		<td><%=bb.getWriter() %></td>
+	    		<td><%=sdf.format(bb.getReg_date()) %></td>
+	    		<td><%=bb.getReadcount() %></td>
+	    		<td><%=bb.getIp() %></td>
+	    	</tr>
+    <% 
+    	}
+    %>
+</table>
+
+<div id="page">
+<%
+	if(count > 0){
+		int pageCount = count / pageSize + (count % pageSize==0 ? 0 : 1);
+		/* 267/10 +1= 26+1 */
+		int pageBlock = 10;
+		int startPage = ((currentPage-1) / pageBlock * pageBlock) + 1;
+		int endPage = startPage + pageBlock - 1;
+		
+		if(endPage > pageCount){
+			endPage = pageCount;
+		}
+		
+		if(startPage>10){
+%>
+			<a href="list.jsp?pageNum=<%=startPage-10%>">[이전]</a>	
+<%			
+		}
+		for(int i=startPage; i<=endPage; i++){
+%>			
+			<a href="list.jsp?pageNum=<%=i%>">[<%=i %>]</a>		
+<%			
+		}
+		if(endPage < pageCount){
+%>
+			<a href="list.jsp?pageNum=<%=startPage+10%>">[다음]</a>
+<%			
+		}
+	}
+%>
+
+</div>

@@ -1,0 +1,71 @@
+<%@page import="myPkg.BoardDao"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="myPkg.BoardBean"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!-- list.jsp(제목 num) => content.jsp -->
+
+<%
+	BoardDao bdao = BoardDao.getInstance();
+	String num = request.getParameter("num");
+	
+	// 글 수정, 글 목록으로 돌아갈시 들고갈 페이지 번호
+	String pageNum = request.getParameter("pageNum");
+	System.out.println("content" + pageNum);
+
+	
+	BoardBean bb = bdao.getArticle(Integer.parseInt(num));
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+%>
+
+<style type="text/css">
+    table {
+        width: 700px;
+        margin: auto;
+        border: 1px solid black;
+       	border-collapse: collapse;
+    }
+    table th {
+        background-color: skyblue;
+        color: black;
+        border: 1px solid black;
+    }
+
+    table td{
+        border: 1px solid black;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>글번호</th>
+        <td><%=bb.getNum()%></td>
+        <th>조회수</th>
+        <td><%=bb.getReadcount()%></td>
+    </tr>
+    <tr>
+        <th>작성자</th>
+        <td><%=bb.getWriter()%></td>
+        <th>작성일</th>
+        <td><%=sdf.format(bb.getReg_date())%></td>
+    </tr>
+    <tr>
+        <th>글제목</th>
+        <td colspan="3"><%=bb.getSubject()%></td>
+    </tr>
+    <tr>
+        <th>글내용</th>
+        <td colspan="3"><%=bb.getContent()%></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        	<input type="button" value="글수정" onClick = "window.location='updateForm.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>'">
+        	<input type="button" value="글삭제" onClick = "window.location='deleteForm.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>'"">
+        	<input type="button" value="답글쓰기" onClick = "window.location='replyForm.jsp'">>
+        	<input type="button" value="글목록" onClick = "window.location='list.jsp?pageNum=<%=pageNum%>'">
+        </td>
+    </tr>
+</table>
+

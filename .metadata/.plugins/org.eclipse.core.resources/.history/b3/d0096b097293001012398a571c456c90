@@ -1,0 +1,77 @@
+package myPkg;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ControllerServlet
+ */
+// @WebServlet(urlPatterns = {"/insert.do", "/update.do", "/delete.do", "/select.do"})
+@WebServlet("*.do")
+public class ControllerServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ControllerServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doAction(request, response);
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doAction(request, response);
+	}
+	
+	private void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		String uri = request.getRequestURI();
+		StringBuffer url = request.getRequestURL();
+		String contextPath = request.getContextPath();
+		int length = contextPath.length();
+		String command = uri.substring(length);
+		String page = null;
+		
+		if(command.equals("/insert.do")) {
+			System.out.println("insert 요청");
+			page = "insert.jsp";
+		}
+		else if (command.equals("/update.do")) {
+			System.out.println("update 요청");
+		}
+		else if (command.equals("/delete.do")) {
+			System.out.println("delete 요청");
+		}
+		else {
+			System.out.println("select 요청");
+		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(".jsp");
+		dispatcher.forward(request, response);
+		
+		System.out.println("uri: " + uri);
+		System.out.println("url: " + url);
+		System.out.println("contextPath: " + contextPath);
+		System.out.println("length: " + length);
+		System.out.println("command: " + command);
+		System.out.println("------------------");
+	}
+
+}

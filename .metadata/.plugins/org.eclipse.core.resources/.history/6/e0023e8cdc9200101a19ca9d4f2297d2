@@ -1,0 +1,39 @@
+package myPkg;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class BoardDao {
+	String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+	String id = "sqlid";
+	String pw = "sqlpw";
+	Connection conn = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+	
+	private static BoardDao instance = new BoardDao();
+	public static BoardDao getInstance() {
+		return instance;
+	}
+	
+	// rivate 생성자 = 외부에서 새로 만들지 못하게 막음
+	private BoardDao() {
+		try {
+			Class.forName(driver);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void getConnection() {
+		try {
+			conn = DriverManager.getConnection(url, id, pw);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

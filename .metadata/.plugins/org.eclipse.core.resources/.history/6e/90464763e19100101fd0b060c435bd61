@@ -1,0 +1,7 @@
+/**
+ * 
+ */
+ 
+function writeSave(){
+	if($("input[name='writer']").val())
+}

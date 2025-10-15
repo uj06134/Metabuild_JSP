@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+Ex02_result.jsp<br>
+<% 
+	request.setCharacterEncoding("UTF-8");
+%>
+<jsp:useBean id= "" class=myPkg.PersonBean>
+
+아이디1: <%=request.getParameter("id") %> <br>
+아이디2: ${param.id} <br>
+아이디3: 
+이름: ${param.name} <br>

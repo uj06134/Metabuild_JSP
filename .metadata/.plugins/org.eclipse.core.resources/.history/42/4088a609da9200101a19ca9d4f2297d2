@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<style>
+    table {
+        border-collapse: collapse;
+        margin: auto;
+        width: 700px;
+    }
+    th {
+        background-color: skyblue;
+        border: 1px solid #232323;
+        height: 30px;
+        text-align: center;
+    }
+    td {
+        border: 1px solid #232323;
+        padding: 5px;
+        text-align: center;
+    }
+    td.subject {
+        text-align: left;
+    }
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+</style>
+
+<table>
+    <tr>
+        <td colspan="6" align="left">
+            <a href="#">글쓰기</a>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th width="50">번호</th>
+        <th width="250">제목</th>
+        <th width="100">작성자</th>
+        <th width="150">작성일</th>
+        <th width="50">조회</th>
+        <th width="100">IP</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="subject"><a href="#"></a></td>
+        <td></td>
+        <td></td>
+        <td>5</td>
+        <td>127.0.0.1</td>
+    </tr>
+</table>
+    

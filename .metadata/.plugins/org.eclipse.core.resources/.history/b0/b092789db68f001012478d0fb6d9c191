@@ -1,0 +1,23 @@
+package myPkg;
+
+public class StudentBean {
+	private int num;
+	private String id;
+	private String name;
+	private String major;
+	private int grade;
+	private int score;
+	private String reg_date;
+	
+	public StudentBean(int num, String id, String name, String major, int grade, int score, String reg_date) {
+		super();
+		this.num = num;
+		this.id = id;
+		this.name = name;
+		this.major = major;
+		this.grade = grade;
+		this.score = score;
+		this.reg_date = reg_date;
+	}
+	
+}

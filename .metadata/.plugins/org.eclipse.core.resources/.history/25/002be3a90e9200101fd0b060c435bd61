@@ -1,0 +1,28 @@
+<%@page import="myPkg.BoardDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	BoardDao bdao = BoardDao.getInstance();
+	String pageNum = request.getParameter("pageNum");
+	
+	// 글 수정, 글 목록으로 돌아갈시 들고갈 페이지 번호
+		String pageNum = request.getParameter("pageNum");
+%>
+<jsp:useBean id="bb" class="myPkg.BoardBean"/>
+<jsp:setProperty property="*" name="bb"/>
+
+<%
+	int cnt = bdao.updateBoard(bb);
+	if (cnt == 1){
+		response.sendRedirect("list.jsp");
+	}else {
+%>
+	<script type="text/javascript">
+		alert("비밀번호가 일치하지 않음");
+		// history: 내가 지금까지 거쳐온 페이지를 기억하고 있는 객체
+		history.go(-1);
+	</script>
+<%		
+	}
+%>

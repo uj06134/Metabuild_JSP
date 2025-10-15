@@ -1,0 +1,27 @@
+package myPkg;
+
+import java.sql.Timestamp;
+
+public class ProductBean {
+	private int id;
+	private String name;
+	private int price;
+	private String company;
+	private String regdate;
+	
+	public ProductBean() {
+		
+	}
+
+	public ProductBean(int id, String name, int price, String company, String regdate) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.company = company;
+		this.regdate = regdate;
+	}
+
+	
+	
+}

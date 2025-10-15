@@ -1,0 +1,6 @@
+package myPkg;
+
+public class SurveyBean {
+	private int no;
+	
+}	

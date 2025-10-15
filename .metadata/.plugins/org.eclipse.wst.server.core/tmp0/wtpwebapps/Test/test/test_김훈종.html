@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test02.html</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+	})
+	
+	function check(){
+		if ($("input[name='name']").val() == ""){
+			alert("이름을 다시 입력하세요")
+			$("input[name='name']").focus();
+			return false;
+		}
+		
+		if ($("input[name='gender']:checked").length == 0){
+			alert("성별을 다시 선택하세요")
+			return false;
+		}
+		
+		if ($("input[name='interest']:checked").length == 0){
+			alert("관심분야를 다시 선택하세요")
+			return false;
+		}
+		
+		if ($("select[name='it']").val() == ""){
+			alert("IT취업 분야를 다시 선택하세요")
+			return false;
+		}
+	}
+</script>
+
+</head>
+<body>
+	
+	<form action="result.jsp" method="post" >
+		<table border="1">
+			<tr>  
+				<th width = "200">이름</th>
+				<td width = "250"><input type="text" name="name"></td>
+			</tr>
+			<tr> 
+				<th>성별</th>
+				<td>
+					남<input type="radio" name="gender" value="남">
+					여<input type="radio" name="gender" value="여">
+				</td>
+			</tr> 
+			<tr>
+				<th>관심분야</th>
+				<td>
+					<input type="checkbox" name="interest" value="Java">Java
+					<input type="checkbox" name="interest" value="JSP">JSP
+					<input type="checkbox" name="interest" value="HTML">HTML
+					<input type="checkbox" name="interest" value="Spring">Spring
+				</td>
+			</tr>
+			<tr>
+				<th>원하는 IT취업 분야</th>
+				<td>
+					<select name="it"> 
+						<option value="">선택
+						<option value="웹개발">웹개발
+						<option value="AI">AI
+						<option value="머신러닝">머신러닝
+						<option value="네트워크보안">네트워크보안
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="전송" onClick= "return check()" >
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+<!-- 
+아래와 같은 테이블을 만들고
+전송 클릭시 각 항목의 누락 체크하시오.
+이름 누락시 alert 창 띄우기
+성별 미체크시 alert 창 띄우기
+관심분야 미체크시 alert 창 띄우기
+원하는 IT취업분야에서 선택 이외의 것 선택안했을 때 alert 창 띄우기
+ -->

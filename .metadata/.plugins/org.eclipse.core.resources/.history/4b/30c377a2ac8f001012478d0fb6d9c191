@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
+<!-- MovieBean 객체 생성 -->
+<jsp:useBean id="mb" class="myPkg.MovieBean"/>
+<jsp:setProperty property="*" name="mb"/>
+
+<%
+	// genre(다수) 넣는법
+	String str = "";
+	String[] genre = request.getParameterValues("genre");
+	
+	for(int i=0; i<genre.length; i+=1){
+		str += genre[i] + " ";
+	}
+	mb.setGenre(str);
+%>
+
+<!-- MovieDao 객체 생성 -->
+<jsp:useBean id="mdao" class="myPkg.MovieDao"/>
+
+<%
+	int cnt = mdao.insertMovie(mb);
+	if (cnt != -1){
+		response.sendRedirect("select.jsp");
+	}else {
+		response.sendRedirect("insertForm.jsp");
+	}
+%>

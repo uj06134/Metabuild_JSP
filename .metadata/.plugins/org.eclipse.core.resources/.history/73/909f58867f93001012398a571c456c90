@@ -1,0 +1,10 @@
+package myPkg;
+
+public class ProductBean {
+	private String id;
+	private String name;
+	private int price;
+	private String company;
+	private Timestamp regdate;
+	
+}

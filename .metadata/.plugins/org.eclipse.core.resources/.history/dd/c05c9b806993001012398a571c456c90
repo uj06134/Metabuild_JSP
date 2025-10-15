@@ -1,0 +1,36 @@
+<%@page import="myPkg.MemberBean"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+
+result.jsp<br>
+
+<%
+	String[] hobby = request.getParameterValues("hobby");
+    MemberBean member = (MemberBean)request.getAttribute("mb");
+    pageContext.setAttribute("member", member);
+%>
+
+<!-- 스크립트릿 방식 -->
+name1: <%= request.getParameter("name") %> <br>
+name2: <%= member.getName() %> <br>
+
+<!-- EL 방식 -->
+name3: ${param.name} <br>
+name4: ${param['name']} <br>
+name5: ${member.name} <br>
+name6: ${member['name']} <br>
+age: ${param.age} <br>
+gender: ${param.gender} <br>
+
+hobby1:
+<% 
+    for(String h : hobby) {
+        out.print(h);
+    }
+%>
+hobby2: ${paramValues.hobby} <br>
+
+
+
+

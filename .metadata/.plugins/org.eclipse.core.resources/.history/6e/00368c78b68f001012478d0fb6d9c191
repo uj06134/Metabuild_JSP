@@ -1,0 +1,6 @@
+package myPkg;
+
+public class StudentBean {
+	private int num;
+	private String id;
+}

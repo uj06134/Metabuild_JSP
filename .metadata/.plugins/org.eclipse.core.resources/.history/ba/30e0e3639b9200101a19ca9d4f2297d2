@@ -1,0 +1,26 @@
+<%@page import="myPkg.BoardDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- deleteForm.jsp(num, pageNum,passwd) => deleteProc.jsp -->
+
+<%
+	String num = request.getParameter("num");
+	String pageNum = request.getParameter("pageNum");
+	String passwd = request.getParameter("passwd");
+%>
+<% 
+	BoardDao bdao = BoardDao.getInstance();
+	int cnt = bdao.deleteBoard(num, passwd);
+	int count = bado.getArticleCount();
+	if(cnt == 1){
+		response.sendRedirect("list.jsp?pageNum="+pageNum);
+	} else{
+%>
+	<script type="text/javascript">
+		alert("비밀번호가 일치하지 않음");
+		// history: 내가 지금까지 거쳐온 페이지를 기억하고 있는 객체
+		history.go(-1);
+	</script>
+<%
+	}
+%>

@@ -1,0 +1,118 @@
+package svy;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import myPkg.SurveyBean;
+import myPkg.SurveyDao;
+
+/**
+ * Servlet implementation class SurveyServlet
+ */
+@WebServlet("*.sv")
+public class SurveyServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	// application은 ServletContext 타입의 참조 변수
+	ServletContext application;
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public SurveyServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+    
+	public void init(ServletConfig config) throws ServletException {
+		// 웹 애플리케이션 전체에 1개만 존재하는 객체
+		application = config.getServletContext();
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doAction(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doAction(request, response);
+	}
+	
+	private void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		SurveyDao sdao = SurveyDao.getInstance();
+		request.setCharacterEncoding("UTF-8");
+		
+		String uri = request.getRequestURI();
+		String contextPath = request.getContextPath();
+		int length = contextPath.length();
+		String command = uri.substring(length);
+		String page = null;
+		
+		if(command.equals("/insert.sv")) {
+			System.out.println("insert 요청");
+			// 한 번 insert가 발생하면 flag를 true로 바꿔서, 
+			// 다른 사용자 요청에서도 false가 아니기 때문에 insert를 더 이상 안 하도록 제어
+			if(application.getAttribute("flag").equals("false")) {
+				
+				String name = request.getParameter("name");
+				String company = request.getParameter("company");
+				String email = request.getParameter("email");
+				String satisfaction = request.getParameter("satisfaction");
+				String[] partArr = request.getParameterValues("part");
+				String part = ""; 
+				for (String p : partArr) {
+					part += p + " ";
+				}
+				String howto = request.getParameter("howto");
+				String agreeParam = request.getParameter("agree");
+				int agree = 0; // 동의 안함
+				if (agreeParam != null) {
+				    agree = Integer.parseInt(agreeParam); // 체크했을 때 1
+				}
+				
+				SurveyBean sb = new SurveyBean(0,name,company,email,satisfaction,part,howto,agree);
+				int cnt = sdao.insertSurvey(sb);
+				page = "select.sv";
+				// 
+				application.setAttribute("flag", "true");
+			} else {
+				page = "select.sv";
+			}
+			
+		} else if(command.equals("/updateForm.sv")) {
+			System.out.println("updateForm 요청");
+			int no = Integer.parseInt(request.getParameter("no"));
+			SurveyBean sb = sdao.getOneSurvey(no);
+			request.setAttribute("sb", sb);
+			page = "updateForm.jsp";
+		
+		} else if(command.equals("/update.sv")) {
+			System.out.println("update 요청");
+
+		} else if(command.equals("/delete.sv")) {
+			System.out.println("delete 요청");
+
+		} else {
+			System.out.println("select 요청");
+			ArrayList<SurveyBean> lists = sdao.getAllSurvey();
+			request.setAttribute("lists", lists);
+			page = "list.jsp";
+		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(page);
+		dispatcher.forward(request, response);
+	}
+
+}

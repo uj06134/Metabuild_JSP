@@ -1,0 +1,37 @@
+DROP TABLE board2 CASCADE CONSTRAINTS;
+DROP SEQUENCE board2_seq;
+
+CREATE TABLE board2 (
+    num        NUMBER NOT NULL PRIMARY KEY,  -- 글 번호 (PK)
+    writer     VARCHAR2(10) NOT NULL,        -- 작성자
+    subject    VARCHAR2(20) NOT NULL,        -- 제목
+    passwd     VARCHAR2(12) NOT NULL,        -- 비밀번호
+    reg_date   DATE NOT NULL,                -- 작성일
+    readcount  NUMBER DEFAULT 0,             -- 조회수
+    ref        NUMBER NOT NULL,              -- 원글 그룹 번호
+    re_step    NUMBER NOT NULL,              -- 답글 순서
+    re_level   NUMBER NOT NULL,              -- 답글 들여쓰기 레벨
+    content    VARCHAR2(2000) NOT NULL       -- 글 내용
+);
+
+CREATE SEQUENCE board2_seq
+    INCREMENT BY 1
+    START WITH 1
+    MINVALUE 1
+    MAXVALUE 10000
+    NOCACHE;
+
+-- 샘플 데이터
+INSERT INTO board2(num, writer, subject, passwd, reg_date, ref, re_step, re_level, content)
+VALUES(board2_seq.NEXTVAL, 'a1', 'a1', '1234', SYSDATE, 1, 0, 0, '내용1');
+
+INSERT INTO board2(num, writer, subject, passwd, reg_date, ref, re_step, re_level, content)
+VALUES(board2_seq.NEXTVAL, 'a2', 'a2', '1234', SYSDATE, 2, 0, 0, '내용2');
+
+INSERT INTO board2(num, writer, subject, passwd, reg_date, ref, re_step, re_level, content)
+VALUES(board2_seq.NEXTVAL, 'a21', 'a21', '1234', SYSDATE, 2, 1, 1, '내용21');
+
+INSERT INTO board2(num, writer, subject, passwd, reg_date, ref, re_step, re_level, content)
+VALUES(board2_seq.NEXTVAL, 'a22', 'a22', '1234', SYSDATE, 2, 2, 1, '내용22');
+
+COMMIT;

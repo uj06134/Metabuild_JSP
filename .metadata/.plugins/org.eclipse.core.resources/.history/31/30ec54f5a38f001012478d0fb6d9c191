@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+insertForm.jsp(id입력하고 중복체크 버튼) => id_check_proc.jsp<br>
+
+<jsp:useBean id="mdao" class="myPkg.MovieDao"/>
+
+<%
+	String userid = request.getParameter("userid");
+	System.out.println("id_check_proc.jsp userid: " + userid);
+	boolean isExist = mdao.searchId(userid);
+	
+	if(isExist){
+		
+	}
+%>

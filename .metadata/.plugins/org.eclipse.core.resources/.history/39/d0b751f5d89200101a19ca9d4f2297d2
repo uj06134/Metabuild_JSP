@@ -1,0 +1,79 @@
+package myPkg;
+
+public class StudentBean {
+	private int num;
+	private String id;
+	private String name;
+	private String major;
+	private int grade;
+	private int score;
+	private String reg_date;
+	
+	public StudentBean(int num, String id, String name, String major, int grade, int score, String reg_date) {
+		super();
+		this.num = num;
+		this.id = id;
+		this.name = name;
+		this.major = major;
+		this.grade = grade;
+		this.score = score;
+		this.reg_date = reg_date;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public int getGrade() {
+		return grade;
+	}
+
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public String getReg_date() {
+		return reg_date;
+	}
+
+	public void setReg_date(String reg_date) {
+		this.reg_date = reg_date;
+	}
+	
+}

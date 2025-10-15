@@ -1,0 +1,7 @@
+요청(insert.per)
+insert.per요청을 처리하는 서블릿으로 넘어간다.
+서블릿 객체 생성
+생성자
+init
+servive(get요청=>doGet())
+servive(get요청=>doPost())

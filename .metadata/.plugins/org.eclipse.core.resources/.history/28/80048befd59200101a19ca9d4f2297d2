@@ -1,0 +1,14 @@
+<%@page import="myPkg.Person"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+insertform.jsp => InsertServlet.java => result.jsp <br>
+
+name1: <%=request.getParameter("name")%> <br>
+
+<%
+	Person obj = (Person)request.getAttribute("per2");
+	System.out.println(obj.getName());
+%>
+Person name: <%=obj.getName() %>
+Person age: <%=obj.getAge() %>
+Person height: <%=obj.getHeigjt() %>

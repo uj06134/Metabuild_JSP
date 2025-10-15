@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.util.*" %>
+<%@ page import = "myPkg.*" %>     
+   
+<!-- MovieDao 객체 생성 -->
+<jsp:useBean id="bdao" class="myPkg.MovieDao"/>
+
+<!-- getAllMovie 메서드 호출 -->
+<%
+	ArrayList<MovieBean> list = bdao.getAllMovie();
+%>
+
+<style type="text/css">
+    table {
+        width: 1000px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    table th {
+        background-color: Yellow;
+    }
+</style>
+<input type="button" value="추가" onClick="location.href='insertForm.jsp'">
+<table border ="1">
+	<tr>
+		<th><input type="checkbox" name="allcheck" onClick="allDelete"></th>>
+		<th>번호</th>
+		<th>아이디</th>
+		<th>이름</th>
+		<th>나이</th>
+		<th>좋아하는 장르</th>
+		<th>즐겨보는 시간대</th>
+		<th>동반관객수</th>
+		<th>개선사항</th>
+		<th>수정</th>
+		<th>삭제</th>
+	</tr>
+		<%for(MovieBean mb : list){%>
+		<tr>
+			<td><input type="checkbox" name="rowcheck"></td>
+			<td><%= mb.getNum()%></td>
+			<td><%= mb.getId() %></td>
+			<td><%= mb.getName() %></td>
+			<td><%= mb.getAge() %></td>
+			<td><%= mb.getGenre() %></td>
+			<td><%= mb.getTime() %></td>
+			<td><%= mb.getPartner() %></td>
+			<td><%= mb.getMemo()%></td>
+			<td><a href = "updateForm.jsp?num=<%= mb.getNum() %>">수정</a></td>
+			<td><a href = "deleteProc.jsp?num=<%= mb.getNum() %>">삭제</a></td>
+			
+		</tr>
+		<%} %>
+</table>

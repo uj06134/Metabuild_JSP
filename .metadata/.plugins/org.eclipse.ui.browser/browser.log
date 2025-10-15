@@ -1,0 +1,271 @@
+
+9월 08, 2025 14:51:30.458 NEW SESSION
+9월 08, 2025 14:51:30.458 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 14:51:30.458 I0000 00:00:1757310690.458153   16252 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 14:51:30.501 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 14:51:30.700 [18852:5704:0908/145130.700:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 14:51:53.683 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 14:51:53.684 I0000 00:00:1757310713.684210   18136 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 14:51:53.760 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 14:51:53.868 [12416:11688:0908/145153.868:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 14:52:14.810 [12416:11688:0908/145214.810:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 14:53:09.227 [12416:11688:0908/145309.226:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 14:54:41.559 [12416:11688:0908/145441.559:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 14:58:16.913 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 14:58:16.913 I0000 00:00:1757311096.913713    7664 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 14:58:16.970 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 14:58:17.65 [12424:17260:0908/145817.065:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 14:58:40.719 [12424:17260:0908/145840.719:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 14:59:34.658 [12424:17260:0908/145934.658:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 15:01:26.535 [12424:17260:0908/150126.534:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 08, 2025 15:32:59.685 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 15:32:59.686 I0000 00:00:1757313179.685643    1960 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 15:32:59.735 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 15:32:59.877 [8152:17196:0908/153259.877:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 15:33:24.967 [8152:17196:0908/153324.966:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 08, 2025 16:50:02.189 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 16:50:02.190 I0000 00:00:1757317802.189819   18088 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 16:50:02.234 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 16:50:02.353 [13048:12192:0908/165002.353:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 16:50:23.639 [13048:12192:0908/165023.638:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 08, 2025 17:27:18.52 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 17:27:18.53 I0000 00:00:1757320038.052435   12928 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 17:27:18.111 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 17:27:18.217 [18172:7900:0908/172718.217:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 08, 2025 17:27:47.63 [18172:7900:0908/172747.062:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+
+9월 08, 2025 17:55:40.710 NEW SESSION
+9월 08, 2025 17:55:40.710 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 17:55:40.710 I0000 00:00:1757321740.709794   17088 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 17:55:40.776 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 17:55:41.65 [18072:2340:0908/175541.064:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 08, 2025 18:09:18.216 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 18:09:18.217 I0000 00:00:1757322558.217376   18856 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 18:09:18.266 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 18:09:18.446 [12736:15000:0908/180918.446:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 08, 2025 18:10:22.198 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 08, 2025 18:10:22.199 I0000 00:00:1757322622.198540   12640 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 08, 2025 18:10:22.240 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 08, 2025 18:10:22.385 [16676:14980:0908/181022.384:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+
+9월 09, 2025 10:54:05.173 NEW SESSION
+9월 09, 2025 10:54:05.173 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 10:54:05.175 I0000 00:00:1757382845.153364   19220 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 10:54:05.203 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 10:54:05.302 [12940:10072:0909/105405.302:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 10:54:31.162 [12940:10072:0909/105431.162:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 10:55:11.743 [12940:10072:0909/105511.743:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 10:56:49.890 [12940:10072:0909/105649.889:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 13:42:30.634 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 13:42:30.634 I0000 00:00:1757392950.633955   12572 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 13:42:30.692 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 13:42:30.806 [15464:5440:0909/134230.805:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 09, 2025 14:17:38.961 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 14:17:38.962 I0000 00:00:1757395058.961814    3092 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 14:17:39.10 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 14:17:39.131 [5248:2240:0909/141739.131:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 09, 2025 17:29:27.324 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 17:29:27.324 I0000 00:00:1757406567.324422   10940 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 17:29:27.366 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 17:29:27.507 [3636:14164:0909/172927.507:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 09, 2025 17:33:06.868 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 17:33:06.868 I0000 00:00:1757406786.868946   16256 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 17:33:06.909 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 17:33:07.17 [12628:13668:0909/173307.017:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:36:54.946 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 17:36:54.947 I0000 00:00:1757407014.947573   13372 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 17:36:54.988 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 17:36:55.92 [2780:15244:0909/173655.091:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:38:38.778 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 17:38:38.778 I0000 00:00:1757407118.778299   12596 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 17:38:38.824 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 17:38:38.935 [3100:8000:0909/173838.934:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:39:03.454 [3100:8000:0909/173903.454:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:40:01.472 [3100:8000:0909/174001.471:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:42:45.914 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 17:42:45.914 I0000 00:00:1757407365.914604    2736 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 17:42:45.954 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 17:42:46.61 [13988:9080:0909/174246.061:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 09, 2025 17:46:35.78 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 17:46:35.79 I0000 00:00:1757407595.078882   15984 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 17:46:35.126 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 17:46:35.229 [18760:6932:0909/174635.228:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:46:56.379 [18760:6932:0909/174656.378:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:48:13.916 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 17:48:13.917 I0000 00:00:1757407693.916641   17780 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 17:48:13.969 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 17:48:14.103 [15468:4204:0909/174814.103:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:48:44.320 [15468:4204:0909/174844.319:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:49:24.835 [15468:4204:0909/174924.835:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 17:51:20.754 [15468:4204:0909/175120.754:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 09, 2025 18:08:52.522 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 18:08:52.522 I0000 00:00:1757408932.522311   18968 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 18:08:52.568 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 18:08:52.699 [12416:13692:0909/180852.699:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 09, 2025 18:09:02.572 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 18:09:02.572 I0000 00:00:1757408942.572450   15908 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 18:09:02.625 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 18:09:02.724 [7000:15944:0909/180902.724:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 18:10:47.132 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 18:10:47.132 I0000 00:00:1757409047.132560    8852 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 18:10:47.174 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 18:10:47.295 [4080:9792:0909/181047.295:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 18:11:00.603 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 18:11:00.603 I0000 00:00:1757409060.603569   14476 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 18:11:00.650 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 18:11:00.840 [6904:3768:0909/181100.839:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 09, 2025 18:11:28.205 [6904:3768:0909/181128.205:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 09, 2025 18:17:05.133 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 09, 2025 18:17:05.133 I0000 00:00:1757409425.133539    9392 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 09, 2025 18:17:05.225 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 09, 2025 18:17:05.297 [2216:17700:0909/181705.296:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+
+9월 10, 2025 14:14:17.954 NEW SESSION
+9월 10, 2025 14:14:17.954 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 10, 2025 14:14:17.954 I0000 00:00:1757481257.953936   16136 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 10, 2025 14:14:18.16 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 10, 2025 14:14:18.128 [17508:19096:0910/141418.127:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 10, 2025 14:15:35.739 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 10, 2025 14:15:35.740 I0000 00:00:1757481335.740081   15260 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 10, 2025 14:15:35.784 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 10, 2025 14:15:35.902 [15744:9496:0910/141535.901:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 10, 2025 14:16:13.506 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 10, 2025 14:16:13.506 I0000 00:00:1757481373.506537   12772 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 10, 2025 14:16:13.552 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 10, 2025 14:16:13.660 [19172:6132:0910/141613.660:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 10, 2025 14:18:01.690 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 10, 2025 14:18:01.690 I0000 00:00:1757481481.690944   14224 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 10, 2025 14:18:01.742 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 10, 2025 14:18:01.883 [9336:11544:0910/141801.883:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 10, 2025 14:19:12.346 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 10, 2025 14:19:12.346 I0000 00:00:1757481552.346651   11968 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 10, 2025 14:19:12.401 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 10, 2025 14:19:12.520 [17324:5008:0910/141912.520:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 10, 2025 14:32:32.18 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 10, 2025 14:32:32.18 I0000 00:00:1757482352.018881   11244 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 10, 2025 14:32:32.69 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 10, 2025 14:32:32.184 [15512:1704:0910/143232.184:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 10, 2025 14:32:54.243 [15512:1704:0910/143254.243:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 10, 2025 14:34:49.263 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 10, 2025 14:34:49.263 I0000 00:00:1757482489.263388   10816 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 10, 2025 14:34:49.315 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 10, 2025 14:34:49.427 [14536:14544:0910/143449.427:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 10, 2025 15:40:44.440 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 10, 2025 15:40:44.440 I0000 00:00:1757486444.440473   18336 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 10, 2025 15:40:44.498 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 10, 2025 15:40:44.613 [17576:11836:0910/154044.613:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 10, 2025 15:41:14.461 [17576:11836:0910/154114.461:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 10, 2025 17:54:17.398 [17576:11836:0910/175417.397:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+9월 10, 2025 18:00:15.58 [17576:11836:0910/180015.058:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+
+9월 11, 2025 13:30:50.420 NEW SESSION
+9월 11, 2025 13:30:50.420 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 11, 2025 13:30:50.421 I0000 00:00:1757565050.403353   14488 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 11, 2025 13:30:50.452 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2025 13:30:50.562 [2300:10248:0911/133050.562:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 13:31:17.933 [2300:10248:0911/133117.933:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 13:31:39.596 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 11, 2025 13:31:39.596 I0000 00:00:1757565099.596408   16372 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 11, 2025 13:31:39.638 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2025 13:31:39.764 [16432:10408:0911/133139.764:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 13:32:04.394 [16432:10408:0911/133204.394:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 13:32:47.840 [16432:10408:0911/133247.840:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 11, 2025 16:50:08.986 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 11, 2025 16:50:08.987 I0000 00:00:1757577008.987111   14236 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 11, 2025 16:50:09.29 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2025 16:50:09.176 [10160:14012:0911/165009.176:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 16:50:32.616 [10160:14012:0911/165032.615:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 11, 2025 16:56:45.209 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 11, 2025 16:56:45.209 I0000 00:00:1757577405.209362   14812 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 11, 2025 16:56:45.255 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2025 16:56:45.367 [14456:15636:0911/165645.366:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 16:57:10.627 [14456:15636:0911/165710.627:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 16:58:05.231 [14456:15636:0911/165805.231:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 17:00:05.123 [14456:15636:0911/170005.122:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 17:03:52.363 [14456:15636:0911/170352.363:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 17:09:36.413 [14456:15636:0911/170936.413:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 11, 2025 17:16:27.317 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 11, 2025 17:16:27.318 I0000 00:00:1757578587.318183    2324 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 11, 2025 17:16:27.378 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2025 17:16:27.482 [8660:14276:0911/171627.482:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 17:16:57.789 [8660:14276:0911/171657.789:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 17:17:54.478 [8660:14276:0911/171754.477:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 11, 2025 17:30:38.902 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 11, 2025 17:30:38.903 I0000 00:00:1757579438.903521   10260 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 11, 2025 17:30:38.952 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2025 17:30:39.101 [15400:3152:0911/173039.099:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 11, 2025 17:38:31.279 기존 브라우저 세션에서 여는 중입니다.
+9월 11, 2025 17:38:35.176 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+9월 11, 2025 17:38:35.176 I0000 00:00:1757579915.176926   15144 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+9월 11, 2025 17:38:35.228 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 11, 2025 17:38:35.341 [14828:3020:0911/173835.341:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 17:38:57.901 [14828:3020:0911/173857.899:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 11, 2025 17:39:39.566 [14828:3020:0911/173939.565:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+
+9월 16, 2025 09:33:45.133 NEW SESSION
+9월 16, 2025 09:33:45.133 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 09:33:45.234 [9380:17352:0916/093345.234:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 09:34:13.01 [9380:17352:0916/093413.000:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 09:35:09.182 [9380:17352:0916/093509.182:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 16, 2025 10:18:55.955 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 10:18:56.61 [13984:11996:0916/101856.061:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 10:19:24.297 [13984:11996:0916/101924.297:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 10:20:14.208 [13984:11996:0916/102014.208:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 10:21:51.970 [13984:11996:0916/102151.970:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 10:25:46.927 [13984:11996:0916/102546.927:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 10:31:41.878 [13984:11996:0916/103141.877:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 12:21:38.257 [13984:11996:0916/122137.240:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+9월 16, 2025 13:24:30.335 [13984:11996:0916/122241.892:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+9월 16, 2025 15:01:39.46 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 15:01:39.187 [8876:3812:0916/150139.187:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:02:02.381 [8876:3812:0916/150202.380:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:02:52.251 [8876:3812:0916/150252.250:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:04:22.58 [8876:3812:0916/150422.058:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 16, 2025 15:34:10.912 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 15:34:11.17 [1680:6168:0916/153411.017:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:34:24.840 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 15:34:24.962 [5176:14912:0916/153424.962:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:34:51.872 [5176:14912:0916/153451.872:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:35:45.463 [5176:14912:0916/153545.461:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:37:24.520 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 15:37:24.614 [9688:16652:0916/153724.614:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:37:50.43 [9688:16652:0916/153750.042:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 15:38:48.561 [9688:16652:0916/153848.561:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 16, 2025 15:40:40.380 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 15:40:40.473 [420:8476:0916/154040.473:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 16, 2025 16:45:55.986 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 16:45:56.83 [9552:8156:0916/164556.083:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 16:46:19.48 [9552:8156:0916/164619.047:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 16:47:02.271 [9552:8156:0916/164702.270:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 16:48:25.59 [9552:8156:0916/164825.058:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 16:51:49.752 [9552:8156:0916/165149.751:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 16:58:52.08 [9552:8156:0916/165852.008:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:10:02.415 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 17:10:02.541 [13632:12764:0916/171002.541:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:10:29.126 [13632:12764:0916/171029.125:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:11:13.998 [13632:12764:0916/171113.997:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:13:04.669 [13632:12764:0916/171304.669:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:17:03.841 [13632:12764:0916/171703.841:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:24:18.40 [13632:12764:0916/172418.040:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:38:47.23 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 17:38:47.138 [7104:8440:0916/173847.138:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:47:36.792 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 16, 2025 17:47:36.872 [12560:7224:0916/174736.872:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:48:03.804 [12560:7224:0916/174803.804:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:48:48.84 [12560:7224:0916/174848.084:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:50:20.445 [12560:7224:0916/175020.445:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:53:45.881 [12560:7224:0916/175345.881:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 16, 2025 17:59:41.755 [12560:7224:0916/175941.754:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+
+9월 17, 2025 10:25:42.232 NEW SESSION
+9월 17, 2025 10:25:42.232 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 17, 2025 10:25:42.355 [2904:14164:0917/102542.355:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 17, 2025 10:26:05.737 [2904:14164:0917/102605.737:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 17, 2025 10:26:55.631 [2904:14164:0917/102655.630:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+9월 17, 2025 10:28:18.09 [2904:14164:0917/102818.008:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
+9월 17, 2025 11:14:35.850 [2904:12820:0917/111435.849:ERROR:CONSOLE:0] "[Report Only] Refused to frame 'https://ogs.google.com/' because an ancestor violates the following Content Security Policy directive: "frame-ancestors 'self'".
+9월 17, 2025 11:14:35.851 ", source:  (0)
+9월 17, 2025 11:14:35.853 [2904:12820:0917/111435.849:ERROR:CONSOLE:0] "[Report Only] Refused to frame 'https://ogs.google.com/' because an ancestor violates the following Content Security Policy directive: "frame-ancestors 'self'".
+9월 17, 2025 11:14:35.856 ", source:  (0)
+9월 17, 2025 13:19:42.292 [2904:14164:0917/131942.291:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2
+9월 17, 2025 14:47:06.22 [2904:14164:0917/144706.021:ERROR:google_apis\gcm\engine\connection_factory_impl.cc:483] ConnectionHandler failed with net error: -2

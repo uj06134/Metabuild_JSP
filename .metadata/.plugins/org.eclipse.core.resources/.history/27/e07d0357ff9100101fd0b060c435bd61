@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="myPkg.BoardBean"%>
+<!-- list.jsp(제목 num) => content.jsp -->
+<jsp:useBean id="bdao" class="myPkg.BoardDao"/>
+<%
+	String num = request.getParameter("num");
+
+	BoardBean bb = bdao.getArticle(Integer.parseInt(num));
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+%>
+
+<style type="text/css">
+    table {
+        width: 700px;
+        margin: auto;
+        border: 1px solid black;
+       	border-collapse: collapse;
+    }
+    table th {
+        background-color: skyblue;
+        color: black;
+        border: 1px solid black;
+    }
+
+    table td{
+        border: 1px solid black;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>글번호</th>
+        <td><%=bb.getNum()%></td>
+        <th>조회수</th>
+        <td><%=bb.getReadcount()%></td>
+    </tr>
+    <tr>
+        <th>작성자</th>
+        <td><%=bb.getWriter()%></td>
+        <th>작성일</th>
+        <td><%=bb.getReg_date()%></td>
+    </tr>
+    <tr>
+        <th>글제목</th>
+        <td colspan="3"><%=bb.getSubject()%></td>
+    </tr>
+    <tr>
+        <th>글내용</th>
+        <td colspan="3"><%=bb.getContent()%></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+        	<input type="button" value="글수정" onClick = "window.location='updateForm.jsp?num=<%= bb.getNum()%>'">
+        	<input type="button" value="글삭제">
+        	<input type="button" value="답글쓰기">
+        	<input type="button" value="글목록" onClick = "window.location='list.jsp'">
+        </td>
+    </tr>
+</table>
+

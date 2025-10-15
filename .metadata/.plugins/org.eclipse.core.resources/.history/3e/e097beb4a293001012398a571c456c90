@@ -1,0 +1,31 @@
+package myPkg;
+
+public class SurveyBean {
+	private int no;
+	private String name;
+	private String company;
+	private String email;
+	private String satisfaction;
+	private String[] part;
+	private String howto;
+	private int agree;
+	
+	public SurveyBean() {
+		
+	}
+	
+	public SurveyBean(int no, String name, String company, String email, String satisfaction, String[] part,
+			String howto, int agree) {
+		super();
+		this.no = no;
+		this.name = name;
+		this.company = company;
+		this.email = email;
+		this.satisfaction = satisfaction;
+		this.part = part;
+		this.howto = howto;
+		this.agree = agree;
+	}
+	
+	
+}	

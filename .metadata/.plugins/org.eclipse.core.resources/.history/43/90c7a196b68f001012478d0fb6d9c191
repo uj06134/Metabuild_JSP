@@ -1,0 +1,12 @@
+package myPkg;
+
+public class StudentBean {
+	private int num;
+	private String id;
+	private String name;
+	private String major;
+	private int grade;
+	private int score;
+	private String reg_date;
+	
+}

@@ -1,0 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- replyForm.jsp(8가지) => replyProc.jsp -->
+
+<jsp:useBean id="bb" class="myPkg.BoardBean"/>
+<jsp:setProperty property="*" name="bb"/>

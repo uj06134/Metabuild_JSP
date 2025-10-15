@@ -1,0 +1,242 @@
+package myPkg;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import oracle.net.aso.b;
+
+public class BookDao {
+	String driver = "oracle.jdbc.driver.OracleDriver";
+    String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+    String id = "sqlid";
+    String pw = "sqlpw";
+    Connection conn = null;
+    PreparedStatement ps = null;
+	ResultSet rs = null;
+    
+    public BookDao(){
+    	try {
+			Class.forName(driver);
+			System.out.println("드라이버 로드 성공");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+    }
+    
+    public void getConnection() {
+    	try {
+			conn = DriverManager.getConnection(url, id, pw);
+			System.out.println("접속 성공");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    }
+    
+    
+    public ArrayList<BookBean> getAllBook() {
+    	getConnection();
+    	ArrayList<BookBean> list = new ArrayList<BookBean>();
+    	try {
+    		String sql = "select * from book order by no";
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				int no = rs.getInt("no");
+				String title = rs.getString("title");
+				String author = rs.getString("author");
+				String publisher = rs.getString("publisher");
+				int price = rs.getInt("price");
+				String day = String.valueOf(rs.getDate("day"));
+				String kind = rs.getString("kind");
+				String bookstore = rs.getString("bookstore");
+				int count = rs.getInt("count");
+				
+				BookBean bb = new BookBean(no,title,author,publisher,price,day,kind,bookstore,count);
+				
+				list.add(bb);
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+				if(rs != null)
+					rs.close();
+				if(conn != null)
+					conn.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+    System.out.println("list: " + list.size());
+    return list;
+    } // getAllBook
+    
+    public int insertBook(BookBean bb) {
+    	int cnt = -1;
+    	getConnection();
+		try {
+			String sql = "insert into book values (bseq.nextval,?,?,?,?,?,?,?,?)";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, bb.getTitle());
+            ps.setString(2, bb.getAuthor());
+            ps.setString(3, bb.getPublisher());
+            ps.setInt(4, bb.getPrice());
+			ps.setString(5, bb.getDay());
+			ps.setString(6, bb.getKind());
+			ps.setString(7, bb.getBookstore());
+			ps.setInt(8, bb.getCount());
+			
+			cnt = ps.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+				if(conn != null)
+					conn.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("cnt: " + cnt);
+		return cnt;
+    } // insertBook
+    
+    public BookBean getBookByNo(String no) {
+    	getConnection();
+    	BookBean bb = null;
+    	try {
+    		String sql = "select * from book where no = ?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, Integer.parseInt(no));
+			rs = ps.executeQuery();
+			
+			if(rs.next()) {
+				int no2 = rs.getInt("no");
+				String title = rs.getString("title");
+				String author = rs.getString("author");
+				String publisher = rs.getString("publisher");
+				int price = rs.getInt("price");
+				String day = String.valueOf(rs.getDate("day"));
+				String kind = rs.getString("kind");
+				String bookstore = rs.getString("bookstore");
+				int count = rs.getInt("count");
+				
+				bb = new BookBean(no2, title, author, publisher, price, day, kind , bookstore, count);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+				if(rs != null)
+					rs.close();
+				if(conn != null)
+					conn.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+    	return bb;
+    } // getBookByNo
+    
+    public int updateBook(BookBean bb){
+    	getConnection();
+    	int cnt = -1;
+    	try {
+    		String sql = "update book set title=?, author=?, publisher=?, price=?, day=?, "
+    				+ "kind=?, bookstore=?, count=? where no=?";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, bb.getTitle());
+			ps.setString(2, bb.getAuthor());
+            ps.setString(3, bb.getPublisher());
+            ps.setInt(4, bb.getPrice());
+            ps.setString(5, bb.getDay());
+            ps.setString(6, bb.getKind());
+            ps.setString(7, bb.getBookstore());
+            ps.setInt(8, bb.getCount());
+            ps.setInt(9, bb.getNo());
+            
+            cnt = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+				if(conn != null)
+					conn.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}		
+    	return cnt;
+    } // updateBook
+    
+    public int deleteBook(String no) {
+    	getConnection();
+    	int cnt = -1;
+
+    	String sql = "delete from book where no = ?";
+    	try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, no);
+			
+            cnt = ps.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+				if(conn != null)
+					conn.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}	
+    	return cnt;
+    } // deleteBook
+    
+    public int multiDeleteBook(String[] no) {
+    	getConnection();
+    	int cnt = -1;
+    	try {
+    		String sql = "delete from book where no=?";
+    		for(int i=0; i<no.length-1; i+=1) {
+    			sql += " or no=?";
+    		} // delete from book where no=? or no=? ... no=?
+			ps = conn.prepareStatement(sql);
+			for(int i=0;i<no.length;i+=1) {
+				ps.setInt(i+1, Integer.parseInt(no[i]));
+			}
+    		System.out.println(2);
+
+			cnt = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+				if(conn != null)
+					conn.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}	
+    	return cnt;
+    } // multiDeleteBook
+}

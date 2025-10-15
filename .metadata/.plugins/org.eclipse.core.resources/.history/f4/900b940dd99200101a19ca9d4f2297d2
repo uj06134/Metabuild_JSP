@@ -1,0 +1,49 @@
+-- 기존 테이블/시퀀스 삭제
+drop table student;
+drop sequence stu_seq;
+
+-- 학생 테이블 생성
+create table student(
+    num       number primary key,       -- PK
+    id        varchar2(15) not null,    -- 학번(ID)
+    name      varchar2(20) not null,    -- 이름
+    major     varchar2(30),             -- 전공
+    grade     number check(grade between 1 and 4), -- 학년(1~4)
+    score     number(3,1),              -- 평균학점(예: 3.5)
+    reg_date  date default sysdate      -- 등록일
+);
+
+-- 시퀀스 생성
+create sequence stu_seq
+    increment by 1
+    start with 1
+    minvalue 1
+    maxvalue 10000
+    nocache;
+
+-- 샘플 데이터 입력
+insert into student(num,id,name,major,grade,score,reg_date)
+values(stu_seq.nextval, 'S001', '홍길동', '컴퓨터공학', 2, 3.5, sysdate);
+
+insert into student(num,id,name,major,grade,score,reg_date)
+values(stu_seq.nextval, 'S002', '김영희', '경영학과', 1, 4.1, sysdate);
+
+insert into student(num,id,name,major,grade,score,reg_date)
+values(stu_seq.nextval, 'S003', '이철수', '전자공학', 3, 2.8, sysdate);
+
+insert into student(num,id,name,major,grade,score,reg_date)
+values(stu_seq.nextval, 'S004', '박민수', '국문학과', 4, 3.2, sysdate);
+
+commit;
+
+-- 출력 형식 지정
+col num for 99
+col id for a10
+col name for a8
+col major for a15
+col grade for 9
+col score for 999.9
+col reg_date for a12
+
+-- 전체 조회
+select * from student;

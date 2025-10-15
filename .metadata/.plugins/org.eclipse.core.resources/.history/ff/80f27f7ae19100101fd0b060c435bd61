@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+ 
+function writeSave(){
+	if($("input[name='writer']").val() == ""){
+		alert("작성자를 입력하세요");
+	}
+}

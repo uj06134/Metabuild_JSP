@@ -1,0 +1,24 @@
+package myPkg;
+
+import java.sql.Timestamp;
+
+public class BoardBean {
+	private int num;
+	private String writer;
+	private String email;
+	private String subject;
+	private String passwd;
+	private Timestamp reg_date;
+	private int readcount;
+	private int ref;
+	private int re_step;
+	private int re_level;
+	private String content;
+	private String ip;
+	
+	public BoardBean() {
+		
+	}
+	
+	
+}

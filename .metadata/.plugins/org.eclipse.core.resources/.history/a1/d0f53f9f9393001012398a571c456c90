@@ -1,0 +1,125 @@
+package myPkg;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class ProductDao {
+	String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+	String id = "sqlid";
+	String pw = "sqlpw";
+	Connection conn = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+	
+	private static ProductDao instance = new ProductDao();
+	public static ProductDao getInstance() {
+		return instance;
+	}
+	private ProductDao() {
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, id, pw);
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public int insertProduct(ProductBean pb){
+		int cnt = -1;
+		String sql = "insert into products values(seqprd.nextval,?,?,?,sysdate)";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, pb.getName());
+			ps.setInt(2, pb.getPrice());
+			ps.setString(3, pb.getCompany());
+			cnt = ps.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return cnt;
+	} // insertProduct
+	
+	public ArrayList<ProductBean> getAllProduct() {
+		ArrayList<ProductBean> lists = new ArrayList<ProductBean>();
+		String sql = "select * from products order by id";
+		try {
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+	            ProductBean pb = new ProductBean();
+	            
+	            pb.setId(rs.getInt("id"));
+	            pb.setName(rs.getString("name"));
+	            pb.setPrice(rs.getInt("price"));
+	            pb.setCompany(rs.getString("company"));
+	            pb.setRegdate(rs.getString("regdate"));
+	            
+	            lists.add(pb);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+				if(rs != null)
+					rs.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return lists;
+	} // getAllProduct
+	
+	public ProductBean getOneProduct(String id) {
+		ProductBean pb = null;
+
+		String sql = "select * from products where id = ?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				pb = new ProductBean();
+	            pb.setId(rs.getInt("id"));
+	            pb.setName(rs.getString("name"));
+	            pb.setPrice(rs.getInt("price"));
+	            pb.setCompany(rs.getString("company"));
+	            pb.setRegdate(rs.getString("regdate"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(ps != null)
+					ps.close();
+				if(rs != null)
+					rs.close();
+			} catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return pb;
+	}// getOneProduct
+	public int updateProduct(ProductBean pb) {
+		int cnt = -1;
+		String sql = "update products set id=?, name=?, price=?, company=?, regdate=?";
+		return 0;
+	}
+}

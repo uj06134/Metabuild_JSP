@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- content.jsp(num, pageNum) => deleteForm.jsp -->
+<% 
+	String num = request.getParameter("num");
+	String pageNum = request.getParameter("pageNum");
+%>
+<form method="post" action="deleteProc.jsp">
+	<table width="350">
+		<tr>
+			<td>비밀번호를 입력하세요</td>
+		</tr>
+		<tr>
+			<td>
+				비밀번호:
+				<input type="password" name="passwd">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				비밀번호:
+				<input type="button" value="글목록">
+			</td>
+		</tr>
+	</table>
+</form>

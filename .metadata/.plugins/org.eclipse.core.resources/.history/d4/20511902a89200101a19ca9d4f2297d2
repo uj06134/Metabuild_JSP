@@ -1,0 +1,19 @@
+<%@page import="java.sql.Timestamp"%>
+<%@page import="myPkg.BoardDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- replyForm.jsp(8가지) => replyProc.jsp -->
+
+<jsp:useBean id="bb" class="myPkg.BoardBean"/>
+<jsp:setProperty property="*" name="bb"/>
+
+
+<%
+	String pageNum = request.getParameter("pageNum");
+
+	BoardDao bdao = BoardDao.getInstance();
+	bb.setReg_date(new Timestamp(System.currentTimeMillis())); // 숫자형태 -> 날짜형태 
+	bb.setIp(request.getRemoteAddr()); // 작성자의 IP 주소 세팅
+	bdao.replyBoard(bb); // 폼입력(5)+3가지=8가지
+	response.sendRedirect("list.jsp?pageNum=+<%= pageNum%>");
+%>

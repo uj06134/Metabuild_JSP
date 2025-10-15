@@ -1,0 +1,6 @@
+package myPkg;
+
+public class BoardBean {
+	private int num;
+	private String writer;
+}

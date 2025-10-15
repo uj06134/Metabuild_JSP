@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- content.jsp(num, pageNum) => deleteForm.jsp -->
+<script type="text/javascript">
+	function check(){
+		if(document.delForm.passwd.value==""){
+			alert("비밀번호를 입력하세요")
+			document.delForm.passwd.focus();
+		}
+	}
+</script>
+
+<% 
+	String num = request.getParameter("num");
+	String pageNum = request.getParameter("pageNum");
+%>
+
+
+<form name="delForm" method="post" action="deleteProc.jsp">
+	<table width="350" border="1">
+		<tr>
+			<td>비밀번호를 입력하세요</td>
+		</tr>
+		<tr>
+			<td>
+				비밀번호:
+				<input type="hidden" name="num" value="<%=num%>">
+				<input type="password" name="passwd">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" value="글삭제" onClick="return check()">
+				<input type="button" value="글목록">
+			</td>
+		</tr>
+	</table>
+</form>

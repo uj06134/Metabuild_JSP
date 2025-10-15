@@ -1,0 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- content.jsp(num, pageNum) => deleteForm.jsp -->
+
+	String pageNum = request.getParameter("pageNum");

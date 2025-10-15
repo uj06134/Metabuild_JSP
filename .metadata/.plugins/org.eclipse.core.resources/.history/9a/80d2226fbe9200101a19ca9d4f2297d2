@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <!-- c공간 -->
+Ex03_result.jsp <br>
+
+${param.kor}<br>
+${param.eng}<br>
+${param.math}<br>
+
+<!-- 합계 -->
+sum1: ${param.math + param.eng + param.math} <br> 
+
+<!-- c공간에 있는 set이라는 태그 -->
+<c:set var="sum" value="${param.math + param.eng + param.math}"/>
+sum2: ${sum} <br> 
+
+<c:set var="avg" value="${sum/3}" />
+avg: ${avg} <Br>
+
+
+<!-- <c:if test="조건식"> -->
+<c:if test="${avg>=90}">
+	A학점
+</c:if>

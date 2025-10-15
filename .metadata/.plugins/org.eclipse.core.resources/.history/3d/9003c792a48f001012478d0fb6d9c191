@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+insertForm.jsp(id입력하고 중복체크 버튼) => id_check_proc.jsp<br>
+
+<jsp:useBean id="mdao" class="myPkg.MovieDao"/>
+
+<%
+	String userid = request.getParameter("userid");
+	System.out.println("id_check_proc.jsp userid: " + userid);
+	boolean isExist = mdao.searchId(userid);
+	
+	String str;
+	if(isExist){
+		str = "NO";
+		out.print(str); // 웹브라우저에 출력되는게 아니라 id를 호출한 곳으로 보내는 것
+	}else{
+		str = "YES";
+		out.print(str);
+	}
+%>

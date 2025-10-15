@@ -1,0 +1,125 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 중복체크 버튼을 클릭 했을 때
+		$("#id_check").click(function(){
+			var isCheck = false; // 중복체크를 클릭하면 true, 클릭하지 않으면 false
+			var isChange = false;
+			var use = "";
+			var isBlank = false;
+			if($("input[name=id]").val() == ''){
+				alert("아이디 입력")
+				return;
+			}
+			
+			$.ajax({
+				url: "id_check_proc.jsp", // 사용가능:yes. 사용불가능:no
+				data: ({
+					userid: $("input[name=id]").val() 
+				}),
+				success: function(data){
+					alert(data);
+					if($.trim(data) == 'YES'){
+						$("#idmessage").html("<font color=blue>사용가능</font>");
+						$("#idmessage").show();
+						use = "possible";
+					} else{
+						$("#idmessage").html("<font color=red>이미 사용중인 아이디입니다</font>");
+						&("#idmessage").show();
+						use = "impossible";
+					}
+				}// success
+			});// ajax
+		});// click
+		
+		$("input[name=id]").keydown(function(){
+			$("#idmessage").css("display", "none");
+			use = "";
+			isChange = true;
+		});// keydown
+		
+		$('#sub').click(function(){
+			if(use == "impossible"){
+				alert("이미 사용중인 아이디입니다.")
+				return false; // 이미 사용중인데 넘어가지 못하게 false
+			}else if(isCheck == false || isChange == true){ //중복체크 버튼 클릭하지 않았으면
+				alert('중복체크를 클릭하세요');
+				return false;
+			}else if($("input[name=id]").val() == ''){
+				alert("아이디를 입력하세요 submit")
+				return false;
+			}
+		});// submit click
+	});
+	
+	
+</script>
+<% 
+	String [] genre = {"공포", "다큐", "액션", "애니메이션"};
+	String [] time = {"08~10","10~12","12~14","14~16","16~18"};
+%>
+	<h2>영화 선호도 조사 </h2>
+	<form action="inputProc.jsp" method="post">
+		<table border="1">
+		<tr>
+			<td>아이디</td>
+			<td>
+				<input type="text" name="id" value="">
+				<input type="button" id="id_check" value="중복체크">
+				<span id = "idmessage" style="display:none"></span>			
+			</td>  
+		</tr>
+		<tr>
+			<td>이름</td><td> 
+			<input type="text" name="name" value=""></td> 
+		</tr> 
+		<tr>
+			<td>나이</td>
+			<td><input type="text" name="age" value=""></td> 
+		</tr>
+		<tr>
+			<td>좋아하는 장르</td>
+			<td>
+			<%for(String g : genre) { %>
+			  <input type="checkbox" name="genre" value="<%= g %>"><%= g %>
+			<%} %>
+				
+			</td> 
+		</tr>
+
+		<tr>
+			<td>즐겨보는 시간대</td>
+			<td>
+		
+				<select name="time">
+					<%for(int i=0; i<time.length; i++){ %>
+    				<option value="<%= time[i] %>"><%= time[i] %></option>
+					<%} %>
+				</select>
+		<tr>
+			<td>동반 관객수</td>
+			<td>
+				<%
+				for(int i=1;i<=5;i++){
+				%>
+					<input type="radio" name="partner" value="<%=i%>"><%=i%>
+				<%} %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>영화관 개선사항</td>
+			<td>
+				<textarea name="memo" cols="40" rows="3"></textarea> 
+			</td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">
+				<input type="submit" value="가입하기" id="sub">
+			</td>
+		</tr>
+		</table>
+	</form>
+

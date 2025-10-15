@@ -1,0 +1,16 @@
+<%@page import="java.sql.Timestamp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<jsp:useBean id="bdao" class="myPkg.BoardDao"/>
+<jsp:useBean id="bb" class="myPkg.BoardBean"/>
+<jsp:setProperty property="*" name="bb"/>
+
+<!-- 입력받은 5가지만 호출 -->
+<%
+    bb.setReg_date(new Timestamp(System.currentTimeMillis())); // 숫자형태 -> 날짜형태 
+    bb.setIp(request.getRemoteAddr()); // 작성자의 IP 주소 세팅
+    bb.insertBoard(bb); // 폼입력(5)+2가지=7가지
+    response.sendRedirect("list.jsp");
+
+%>
